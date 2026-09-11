@@ -1,7 +1,7 @@
 # Hope Gift Crafts
 
-A single-page marketing website for **Hope Gift Crafts** — authentic Maasai crafts
-(wrist bands, beads, sandals, lesos and more) exported worldwide.
+A single-page marketing website for **Hope Gift Crafts** — authentic handmade crafts
+(wrist bands, beads, sandals, lesos and more) delivered worldwide.
 
 Built with **pure HTML, CSS and vanilla JavaScript** (no frameworks, no build step).
 
@@ -26,11 +26,10 @@ assets/img/     — generated imagery
 
 ## Features
 
-- Hero with animated imagery, counters and a fair-trade badge
+- Split hero with animated imagery and a customer unboxing slideshow
 - Filterable product collection (8 crafts)
 - Live multi-currency pricing (USD / EUR / GBP)
-- Shopping basket with quantity controls, free-shipping progress and
-  localStorage persistence
+- Shopping basket with quantity controls and localStorage persistence
 - Scrolling marquee, "why us" features, how-it-works steps
 - Testimonials slider, newsletter and contact forms
 - Fully responsive, animated on scroll, reduced-motion friendly

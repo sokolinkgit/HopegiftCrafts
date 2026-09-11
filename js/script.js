@@ -10,7 +10,7 @@
   /* ── catalogue ─────────────────────────────────────────────── */
   const PRODUCTS = [
     {
-      id: 'bracelet', cat: 'wrist', name: 'Maasai Beaded Wrist Bands',
+      id: 'bracelet', cat: 'wrist', name: 'Beaded Wrist Bands',
       desc: 'Hand-strung glass beads in signature red, blue & white.',
       price: 24, oldPrice: 32, rating: 4.9, badge: 'Bestseller',
       img: 'assets/img/product-bracelet.jpg'
@@ -41,7 +41,7 @@
     },
     {
       id: 'leso', cat: 'fabric', name: 'Leso / Shuka Wrap',
-      desc: 'Bold Kenyan cloth — wear it, drape it, gift it.',
+      desc: 'Bold, colourful cloth — wear it, drape it, gift it.',
       price: 45, rating: 4.8,
       img: 'assets/img/product-leso.jpg'
     },
@@ -52,7 +52,7 @@
       img: 'assets/img/product-basket.jpg'
     },
     {
-      id: 'belt', cat: 'accessories', name: 'Maasai Beaded Belt',
+      id: 'belt', cat: 'accessories', name: 'Beaded Belt',
       desc: 'A colourful beaded belt on a supple leather strap.',
       price: 74, rating: 4.8, badge: 'New',
       img: 'assets/img/product-belt.jpg'
@@ -70,8 +70,7 @@
     GBP: { symbol: '£', rate: 0.79 }
   };
 
-  const FREE_SHIP_THRESHOLD = 150; // in USD
-  const SHIPPING_FLAT = 12;        // in USD
+  const SHIPPING_FLAT = 12; // in USD
 
   /* ── state ─────────────────────────────────────────────────── */
   let currency = 'USD';
@@ -102,14 +101,6 @@
     return new Intl.NumberFormat('en-US', {
       style: 'currency', currency, minimumFractionDigits: 2, maximumFractionDigits: 2
     }).format(val);
-  }
-
-  function formatMoneyShort(usd) {
-    const val = convert(usd);
-    const str = new Intl.NumberFormat('en-US', {
-      style: 'currency', currency, minimumFractionDigits: 0, maximumFractionDigits: 2
-    }).format(val);
-    return str;
   }
 
   /* ── render products ───────────────────────────────────────── */
@@ -264,20 +255,10 @@
 
     if (hasItems) {
       const subtotalUSD = cartSubtotalUSD();
-      const shippingUSD = subtotalUSD >= FREE_SHIP_THRESHOLD ? 0 : SHIPPING_FLAT;
+      const shippingUSD = SHIPPING_FLAT;
       $('#cartSubtotal').textContent = formatMoney(subtotalUSD);
-      $('#cartShipping').textContent = shippingUSD === 0 ? 'FREE' : formatMoney(shippingUSD);
+      $('#cartShipping').textContent = formatMoney(shippingUSD);
       $('#cartTotal').textContent = formatMoney(subtotalUSD + shippingUSD);
-
-      const note = $('#cartNote');
-      if (shippingUSD === 0) {
-        note.textContent = '🎉 You unlocked FREE worldwide shipping!';
-        note.classList.remove('alert');
-      } else {
-        const remaining = FREE_SHIP_THRESHOLD - subtotalUSD;
-        note.textContent = `Add ${formatMoneyShort(remaining)} more for free worldwide shipping.`;
-        note.classList.add('alert');
-      }
     }
   }
 
@@ -320,7 +301,7 @@
   const header = $('#siteHeader');
   const progress = $('.scroll-progress');
   const navLinks = $$('.nav-link');
-  const sections = ['home', 'collection', 'heritage', 'why-us', 'reviews', 'contact']
+  const sections = ['home', 'collection', 'why-us', 'reviews', 'contact']
     .map(id => $(`#${id}`)).filter(Boolean);
 
   function onScroll() {
@@ -375,32 +356,6 @@
     });
 
     targets.forEach(t => io.observe(t));
-  }
-
-  /* ── stat counters ─────────────────────────────────────────── */
-  function initCounters() {
-    const nums = $$('.stat-num[data-count]');
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        const el = entry.target;
-        io.unobserve(el);
-        const target = parseFloat(el.dataset.count);
-        const suffix = el.dataset.suffix || '';
-        const isFloat = target % 1 !== 0;
-        const dur = 1600;
-        const start = performance.now();
-        function tick(now) {
-          const t = Math.min((now - start) / dur, 1);
-          const eased = 1 - Math.pow(1 - t, 3);
-          const val = target * eased;
-          el.textContent = (isFloat ? val.toFixed(1) : Math.round(val)) + suffix;
-          if (t < 1) requestAnimationFrame(tick);
-        }
-        requestAnimationFrame(tick);
-      });
-    }, { threshold: 0.6 });
-    nums.forEach(n => io.observe(n));
   }
 
   /* ── unboxing slideshow ────────────────────────────────────── */
@@ -586,7 +541,6 @@
     setCurrency('USD');
     bindEvents();
     initReveal();
-    initCounters();
     initUnboxing();
     initForms();
     onScroll();
