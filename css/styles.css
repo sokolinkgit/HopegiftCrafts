@@ -21,6 +21,8 @@
   --blue:       #2a5c9e;
   --green:      #4c7a46;
   --white:      #ffffff;
+  --wa:         #25d366;
+  --wa-deep:    #128c7e;
 
   /* type */
   --font-display: 'Fraunces', Georgia, serif;
@@ -176,19 +178,6 @@ input, select, textarea { font: inherit; color: inherit; }
 
 .nav-actions { display: flex; align-items: center; gap: 14px; }
 
-.currency {
-  display: inline-flex; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.28);
-  border-radius: 999px; padding: 3px; backdrop-filter: blur(6px);
-}
-.currency-btn {
-  padding: 6px 12px; border-radius: 999px; font-size: 12.5px; font-weight: 600; color: rgba(255,255,255,.85);
-  transition: background .3s, color .3s;
-}
-.currency-btn[aria-pressed="true"] { background: var(--cream); color: var(--ink); }
-.site-header.scrolled .currency { background: rgba(42,28,18,.06); border-color: rgba(42,28,18,.12); }
-.site-header.scrolled .currency-btn { color: var(--ink-soft); }
-.site-header.scrolled .currency-btn[aria-pressed="true"] { background: var(--ink); color: var(--cream); }
-
 .header-right { display: flex; align-items: center; gap: 12px; }
 .cart-btn {
   position: relative; display: grid; place-items: center; width: 46px; height: 46px;
@@ -231,7 +220,6 @@ input, select, textarea { font: inherit; color: inherit; }
 }
 .mobile-link:hover { color: var(--amber); padding-left: 10px; }
 .mobile-menu-foot { display: flex; flex-direction: column; gap: 18px; }
-.mobile-currency { align-self: flex-start; }
 
 /* ── hero ──────────────────────────────────────────────────── */
 .hero {
@@ -394,6 +382,18 @@ input, select, textarea { font: inherit; color: inherit; }
   background: var(--terra-tint); color: var(--terra); transition: background .3s, color .3s, transform .3s var(--ease);
 }
 .add-btn:hover { background: var(--terra); color: var(--white); transform: scale(1.08); }
+
+/* ── per-product WhatsApp order button ─────────────────────── */
+.wa-order-btn {
+  margin-top: 12px; display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+  width: 100%; padding: 12px 14px; border-radius: 12px; background: var(--wa-deep); color: var(--white);
+  font-size: 14px; font-weight: 600; letter-spacing: .01em; box-shadow: 0 10px 22px rgba(18, 140, 126, .28);
+  transition: transform .35s var(--ease), background .3s, box-shadow .35s var(--ease);
+}
+.wa-order-btn:hover { background: var(--wa); color: #08431f; transform: translateY(-2px); box-shadow: 0 14px 28px rgba(37, 211, 102, .34); }
+.wa-order-btn:active { transform: translateY(0) scale(.99); }
+.wa-order-icon { display: grid; place-items: center; flex: none; }
+.wa-order-icon svg { width: 19px; height: 19px; }
 
 .noscript { text-align: center; color: var(--ink-soft); }
 
@@ -693,6 +693,42 @@ input, select, textarea { font: inherit; color: inherit; }
 .toast.show { transform: translate(-50%, 0); opacity: 1; }
 .toast .toast-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--amber); flex: none; }
 
+/* ── floating WhatsApp button ──────────────────────────────── */
+.wa-float {
+  position: fixed; right: 26px; bottom: 26px; z-index: 950;
+  display: flex; align-items: center; gap: 0;
+  height: 62px; padding: 0; border-radius: 999px;
+  background: var(--wa-deep); color: var(--white);
+  box-shadow: 0 16px 34px rgba(18, 140, 126, .42);
+  transition: box-shadow .4s var(--ease), background .3s, transform .4s var(--ease);
+}
+.wa-float:hover { background: var(--wa); color: #08431f; transform: translateY(-3px); box-shadow: 0 22px 42px rgba(37, 211, 102, .46); }
+.wa-float:active { transform: translateY(0) scale(.98); }
+
+.wa-float-icon {
+  width: 62px; height: 62px; flex: none; display: grid; place-items: center; border-radius: 50%;
+}
+.wa-float-icon svg { width: 30px; height: 30px; }
+
+.wa-float-label {
+  max-width: 0; overflow: hidden; white-space: nowrap; font-size: 14.5px; font-weight: 600;
+  opacity: 0; transition: max-width .45s var(--ease), opacity .35s, padding .45s var(--ease);
+  padding-right: 0;
+}
+.wa-float:hover .wa-float-label, .wa-float:focus-visible .wa-float-label {
+  max-width: 220px; opacity: 1; padding-right: 22px;
+}
+
+.wa-float-pulse {
+  position: absolute; inset: 0; border-radius: 999px; pointer-events: none;
+  box-shadow: 0 0 0 0 rgba(37, 211, 102, .55); animation: waPulse 2.6s var(--ease) infinite;
+}
+@keyframes waPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(37, 211, 102, .5); }
+  70%  { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
 /* ── responsive ────────────────────────────────────────────── */
 @media (max-width: 1080px) {
   .product-grid { grid-template-columns: repeat(3, 1fr); }
@@ -732,6 +768,16 @@ input, select, textarea { font: inherit; color: inherit; }
   .unboxing-arrow.prev { left: 10px; }
   .unboxing-arrow.next { right: 10px; }
   .country-grid { grid-template-columns: 1fr; }
+
+  /* floating WhatsApp bubble: compact, label never expands on touch */
+  .wa-float { right: 16px; bottom: 16px; height: 54px; }
+  .wa-float-icon { width: 54px; height: 54px; }
+  .wa-float-icon svg { width: 26px; height: 26px; }
+  .wa-float-label { display: none; }
+  .toast { bottom: 84px; max-width: min(76vw, 460px); }
+
+  /* product card CTA gets a little tighter */
+  .wa-order-btn { padding: 11px 12px; font-size: 13.5px; }
 }
 
 @media (max-width: 460px) {
