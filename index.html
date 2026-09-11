@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hope Gift Crafts — Authentic Maasai Crafts, Shipped Worldwide</title>
+  <meta name="description" content="Hope Gift Crafts brings you authentic, handcrafted Maasai beadwork, sandals, lesos and more — made by skilled Kenyan artisans and exported to over 40 countries worldwide." />
+  <meta name="theme-color" content="#2a1d15" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='18' cy='22' r='9' fill='%23BE4B2F'/%3E%3Ccircle cx='46' cy='22' r='9' fill='%23E8A33C'/%3E%3Ccircle cx='18' cy='44' r='9' fill='%2316786A'/%3E%3Ccircle cx='46' cy='44' r='9' fill='%232A5C9E'/%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- ══════════ PROGRESS BAR ══════════ -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ══════════ HEADER ══════════ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Hope Gift Crafts — home">
+        <span class="brand-mark" aria-hidden="true">
+          <span class="bead b1"></span><span class="bead b2"></span><span class="bead b3"></span><span class="bead b4"></span>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Hope Gift Crafts</span>
+          <span class="brand-tag">Handmade in Kenya · Worldwide</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#collection" class="nav-link">Collection</a></li>
+          <li><a href="#heritage" class="nav-link">Our Heritage</a></li>
+          <li><a href="#why-us" class="nav-link">Why Us</a></li>
+          <li><a href="#reviews" class="nav-link">Reviews</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <div class="currency" role="group" aria-label="Select currency">
+            <button class="currency-btn" data-currency="USD" aria-pressed="true">$ USD</button>
+            <button class="currency-btn" data-currency="EUR" aria-pressed="false">€ EUR</button>
+            <button class="currency-btn" data-currency="GBP" aria-pressed="false">£ GBP</button>
+          </div>
+          <a href="#collection" class="btn btn-primary nav-cta">Shop Now</a>
+        </div>
+      </nav>
+
+      <div class="header-right">
+        <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/>
+            <path d="M3 4h2.2l2.4 12.2a1.5 1.5 0 0 0 1.5 1.2h8.6a1.5 1.5 0 0 0 1.5-1.2L21 8H6"/>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════ MOBILE MENU ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Mobile navigation">
+      <ul class="mobile-nav-list">
+        <li><a href="#home" class="mobile-link">Home</a></li>
+        <li><a href="#collection" class="mobile-link">Collection</a></li>
+        <li><a href="#heritage" class="mobile-link">Our Heritage</a></li>
+        <li><a href="#why-us" class="mobile-link">Why Us</a></li>
+        <li><a href="#reviews" class="mobile-link">Reviews</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+      <div class="mobile-menu-foot">
+        <div class="currency mobile-currency" role="group" aria-label="Select currency">
+          <button class="currency-btn" data-currency="USD">$ USD</button>
+          <button class="currency-btn" data-currency="EUR">€ EUR</button>
+          <button class="currency-btn" data-currency="GBP">£ GBP</button>
+        </div>
+        <a href="#collection" class="btn btn-primary btn-block">Shop the Collection</a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="home">
+    <!-- ══════════ HERO ══════════ -->
+    <section class="hero" id="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <img src="assets/img/hero.jpg" alt="" />
+        <div class="hero-veil"></div>
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="hero-eyebrow reveal">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            Handcrafted in Kenya &nbsp;·&nbsp; Exported to 40+ countries
+          </p>
+          <h1 class="hero-title reveal">
+            Wear the <em>story</em> of the Maasai,
+            <span class="hero-title-line">delivered to <span class="grad-text">your door.</span></span>
+          </h1>
+          <p class="hero-sub reveal">
+            Hope Gift Crafts brings you authentic Maasai wrist bands, beads, sandals, lesos
+            and more — every piece hand-strung by skilled Kenyan artisans and shipped
+            safely anywhere on Earth.
+          </p>
+          <div class="hero-cta reveal">
+            <a href="#collection" class="btn btn-primary btn-lg">Explore the Collection
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#heritage" class="btn btn-ghost btn-lg">Our Story</a>
+          </div>
+
+          <div class="hero-stats reveal" aria-label="Key facts">
+            <div class="stat">
+              <span class="stat-num" data-count="40" data-suffix="+">0</span>
+              <span class="stat-label">Countries served</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="120" data-suffix="+">0</span>
+              <span class="stat-label">Artisan partners</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="100" data-suffix="%">0</span>
+              <span class="stat-label">Handmade</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="4.9" data-suffix="★">0</span>
+              <span class="stat-label">Global rating</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-badge reveal" aria-hidden="true">
+          <span class="hero-badge-inner">
+            <span class="hero-badge-top">Fair Trade</span>
+            <span class="hero-badge-mid">100%</span>
+            <span class="hero-badge-bot">Artisan Made</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <span class="hero-scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- ══════════ MARQUEE ══════════ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Free worldwide shipping over $150</span><i class="bead-sep b-red"></i>
+        <span>Maasai Wrist Bands</span><i class="bead-sep b-blue"></i>
+        <span>Beaded Sandals</span><i class="bead-sep b-amber"></i>
+        <span>Leso &amp; Shuka</span><i class="bead-sep b-green"></i>
+        <span>Handwoven Baskets</span><i class="bead-sep b-red"></i>
+        <span>Beaded Jewelry</span><i class="bead-sep b-blue"></i>
+        <span>Handcrafted Gifts</span><i class="bead-sep b-amber"></i>
+        <span>Free worldwide shipping over $150</span><i class="bead-sep b-red"></i>
+        <span>Maasai Wrist Bands</span><i class="bead-sep b-blue"></i>
+        <span>Beaded Sandals</span><i class="bead-sep b-amber"></i>
+        <span>Leso &amp; Shuka</span><i class="bead-sep b-green"></i>
+        <span>Handwoven Baskets</span><i class="bead-sep b-red"></i>
+        <span>Beaded Jewelry</span><i class="bead-sep b-blue"></i>
+        <span>Handcrafted Gifts</span><i class="bead-sep b-amber"></i>
+      </div>
+    </div>
+
+    <!-- ══════════ HERITAGE ══════════ -->
+    <section class="section heritage" id="heritage">
+      <div class="container heritage-grid">
+        <div class="heritage-media reveal">
+          <div class="heritage-photo">
+            <img src="assets/img/about.jpg" alt="Kenyan artisan hands stringing colorful Maasai beads" loading="lazy" />
+          </div>
+          <div class="heritage-frame" aria-hidden="true"></div>
+          <div class="heritage-card" aria-hidden="true">
+            <span class="heritage-card-num">15+</span>
+            <span class="heritage-card-label">years of heritage craft</span>
+          </div>
+        </div>
+
+        <div class="heritage-content">
+          <p class="eyebrow reveal">Our Heritage</p>
+          <h2 class="section-title reveal">Craft that carries a <span class="grad-text">centuries-old story</span></h2>
+          <p class="reveal">
+            Among the Maasai, every colour tells a story — <strong>red</strong> for courage,
+            <strong>blue</strong> for the sky and energy, <strong>green</strong> for the land,
+            <strong>white</strong> for peace, <strong>orange</strong> for hospitality. When you hold
+            a piece of Maasai beadwork, you hold a language of colour passed down
+            through generations.
+          </p>
+          <p class="reveal">
+            At Hope Gift Crafts, we work directly with artisans — mothers, fathers and young
+            makers across Kenya — paying fair prices so their craft thrives and reaches the
+            world with pride.
+          </p>
+          <ul class="heritage-points">
+            <li class="reveal">
+              <span class="point-dot" aria-hidden="true"></span>
+              <div><strong>Direct from artisans</strong><span>No middlemen — fair pay goes straight to the makers.</span></div>
+            </li>
+            <li class="reveal">
+              <span class="point-dot" aria-hidden="true"></span>
+              <div><strong>Authentic materials</strong><span>Genuine glass beads, leather and hand-dyed fabric.</span></div>
+            </li>
+            <li class="reveal">
+              <span class="point-dot" aria-hidden="true"></span>
+              <div><strong>Export-ready quality</strong><span>Every piece inspected and packaged for safe global travel.</span></div>
+            </li>
+          </ul>
+          <a href="#collection" class="btn btn-outline reveal">See the Craftsmanship</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ COLLECTION ══════════ -->
+    <section class="section collection" id="collection">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">The Collection</p>
+          <h2 class="section-title">Finest African crafts at <span class="grad-text">irresistible prices</span></h2>
+          <p class="section-sub">
+            Handcrafted one piece at a time — pick your favourites, pay in your currency,
+            and we'll deliver them to your door, anywhere in the world.
+          </p>
+        </div>
+
+        <div class="filters reveal" role="tablist" aria-label="Filter products">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Crafts</button>
+          <button class="filter-btn" data-filter="wrist" role="tab" aria-selected="false">Wrist Wear</button>
+          <button class="filter-btn" data-filter="necklace" role="tab" aria-selected="false">Necklaces &amp; Earrings</button>
+          <button class="filter-btn" data-filter="footwear" role="tab" aria-selected="false">Footwear</button>
+          <button class="filter-btn" data-filter="fabric" role="tab" aria-selected="false">Fabric</button>
+          <button class="filter-btn" data-filter="home" role="tab" aria-selected="false">Home &amp; Décor</button>
+          <button class="filter-btn" data-filter="accessories" role="tab" aria-selected="false">Accessories</button>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+          <!-- Rendered by JS -->
+        </div>
+        <noscript>
+          <p class="noscript">Please enable JavaScript to view the full collection and shop.</p>
+        </noscript>
+      </div>
+    </section>
+
+    <!-- ══════════ WHY US ══════════ -->
+    <section class="section why-us" id="why-us">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Why Hope Gift Crafts</p>
+          <h2 class="section-title">Built for a <span class="grad-text">global family</span> of craft lovers</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature reveal">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.6-9.5-9A5.5 5.5 0 0 1 12 6.5 5.5 5.5 0 0 1 21.5 12c-2.5 4.4-9.5 9-9.5 9z"/></svg>
+            </span>
+            <h3>100% Handcrafted</h3>
+            <p>Every bead is strung by hand. No two pieces are ever exactly alike — that's the beauty of it.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.5l-4.8 2.4.9-5.4L4.2 7.7l5.4-.8L12 2z"/></svg>
+            </span>
+            <h3>Fair Trade, Direct</h3>
+            <p>We buy straight from the artisans at honest prices, helping communities grow and thrive.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg>
+            </span>
+            <h3>Worldwide Export</h3>
+            <p>Tracked shipping to over 40 countries, with every parcel carefully packed to travel far.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </span>
+            <h3>Secure &amp; Easy</h3>
+            <p>Pay safely in USD, EUR or GBP with buyer protection and a no-fuss returns promise.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ PROCESS ══════════ -->
+    <section class="section process" id="process">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">How It Works</p>
+          <h2 class="section-title">From artisan hands to yours, in <span class="grad-text">four simple steps</span></h2>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-num">01</span>
+            <h3>Browse &amp; choose</h3>
+            <p>Explore wrist bands, beads, sandals, lesos and more — all handmade and ready to gift.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">02</span>
+            <h3>Order in your currency</h3>
+            <p>Check out safely in USD, EUR or GBP. Secure payment with full buyer protection.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">03</span>
+            <h3>We pack with love</h3>
+            <p>Each piece is inspected and lovingly wrapped before its journey across the world.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">04</span>
+            <h3>Unbox a story</h3>
+            <p>Tracked delivery to your door in 7–14 days. Unwrap a piece of African heritage.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ══════════ UNBOXING SLIDESHOW ══════════ -->
+    <section class="section unboxing" id="unboxing">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Unboxed With Love</p>
+          <h2 class="section-title">Real smiles, <span class="grad-text">real crafts</span>, delivered worldwide</h2>
+          <p class="section-sub">
+            From our Nairobi studio to doorsteps across the globe — here's what our customers
+            find when they open their box.
+          </p>
+        </div>
+
+        <div class="unboxing-stage reveal" id="unboxingStage">
+          <div class="unboxing-track" id="unboxingTrack"><!-- slides injected by JS --></div>
+
+          <button class="unboxing-arrow prev" id="unboxingPrev" aria-label="Previous slide">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+          </button>
+          <button class="unboxing-arrow next" id="unboxingNext" aria-label="Next slide">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+          <div class="unboxing-dots" id="unboxingDots" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ REVIEWS BY COUNTRY ══════════ -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Loved Worldwide</p>
+          <h2 class="section-title">Reviews from our <span class="grad-text">global family</span></h2>
+          <p class="section-sub">
+            Real words from craft lovers in the United States, Canada, Australia and the United Kingdom.
+          </p>
+        </div>
+
+        <div class="country-grid">
+          <!-- USA -->
+          <div class="country-group reveal">
+            <div class="country-head">
+              <span class="country-flag" aria-hidden="true">🇺🇸</span>
+              <div>
+                <h3>United States</h3>
+                <div class="country-stars" aria-label="4.9 out of 5 stars">★★★★★ <span>4.9</span></div>
+              </div>
+            </div>
+            <ul class="country-reviews">
+              <li class="review-item">
+                <div class="review-item-top">
+                  <span class="avatar a1" aria-hidden="true">E</span>
+                  <div><strong>Emily Thompson</strong><em>Austin, Texas</em></div>
+                  <span class="review-item-stars" aria-hidden="true">★★★★★</span>
+                </div>
+                <p>"The beadwork is flawless and the colours pop even more in person. I get compliments every time I wear my wrist bands."</p>
+              </li>
+              <li class="review-item">
+                <div class="review-item-top">
+                  <span class="avatar a2" aria-hidden="true">M</span>
+                  <div><strong>Michael Carter</strong><em>Portland, Oregon</em></div>
+                  <span class="review-item-stars" aria-hidden="true">★★★★★</span>
+                </div>
+                <p>"Ordered the beaded sandals as a gift for my wife. She hasn't taken them off — shipping to Oregon took just 9 days."</p>
+              </li>
+              <li class="review-item">
+                <div class="review-item-top">
+                  <span class="avatar a3" aria-hidden="true">S</span>
+                  <div><strong>Sarah Mitchell</strong><em>Denver, Colorado</em></div>
+                  <span class="review-item-stars" aria-hidden="true">★★★★★</span>
+                </div>
+                <p>"You can feel the love in every bead. My necklace is a piece of art I'll treasure forever."</p>
+              </li>
+              <li class="review-item">
+                <div class="review-item-top">
+                  <span class="avatar a4" aria-hidden="true">R</span>
+                  <div><strong>Rachel Foster</strong><em>Boston, Massachusetts</em></div>
+                  <span class="review-item-stars" aria-hidden="true">★★★★★</span>
+                </div>
+                <p>"Beautiful quality, fair prices and a story worth sharing. This is now my go-to for meaningful gifts."</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Canada -->
+          <div class="country-group reveal">
+            <div class="country-head">
+              <span class="country-flag" aria-hidden="true">🇨🇦</span>
+              <div>
+                <h3>Canada</h3>
+                <div class="country-stars" aria-label="4.9 out of 5 stars">★★★★★ <span>4.9</span></div>
+              </div>
+            </div>
+            <ul class="country-reviews">
+              <li class="review-item">
+                <div class="review-item-top">
+                  <span class="avatar a1" aria-hidden="true">O</span>
+                  <div><strong>Olivia Tremblay</strong><em>Toronto, Ontario</em></div>
+                  <span class="review-item-stars" aria-hidden="true">★★★★★</span>
+                </div>
+                <p>"My leso wrap is stunning. The craftsmanship exceeded every expectation — and it arrived beautifully packed."</p>
+              </li>
+              <li class="review-item">
+                <div class="review-item-top">
+                  <span class="avatar a2" aria-hidden="true">J</span>
+                  <div><strong>James Wilson</strong><em>Vancouver, British Columbia</em></div>
+                  <span class="review-item-stars" aria-hidden="true">★★★★★</span>
+                </div>
+                <p>"Genuine, hand-made quality you rarely find. The basket is now the centrepiece of our living room."</p>
+              </li>
+              <li class="review-item">
+                <div class="review-item-top">
+                  <span class="avatar a3" aria-hidden="true">E</span>
+                  <div><strong>Emma Roy</strong><em>Montréal, Québec</em></div>
+                  <span class="review-item-stars" aria-hidden="true">★★★★★</span>
+                </div>
+                <p>"The earrings are light, vibrant and so well made. Shipping to Canada was smooth and surprisingly fast."</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Australia -->
+          <div class="country-group reveal">
+            <div class="country-head">
+              <span class="country-flag" aria-hidden="true">🇦🇺</span>
+              <div>
+                <h3>Australia</h3>
+                <div class="country-stars" aria-label="4.8 out of 5 stars">★★★★★ <span>4.8</span></div>
+              </div>
+            </div>
+            <ul class="country-reviews">
+              <li class="review-item">
+                <div class="review-item-top">
+                  <span class="avatar a1" aria-hidden="true">C</span>
+                  <div><strong>Charlotte Taylor</strong><em>Sydney, New South Wales</em></div>
+                  <span class="review-item-stars" aria-hidden="true">★★★★★</span>
+                </div>
+                <p>"My beaded sandals are even more beautiful than the photos. Friends in Sydney keep asking where they're from."</p>
+              </li>
+              <li class="review-item">
+                <div class="review-item-top">
+                  <span class="avatar a2" aria-hidden="true">J</span>
+                  <div><strong>Jack Brown</strong><em>Melbourne, Victoria</em></div>
+                  <span class="review-item-stars" aria-hidden="true">★★★★★</span>
+                </div>
+                <p>"Ordered a collar necklace for my mum's birthday. She cried — the beadwork is extraordinary."</p>
+              </li>
+              <li class="review-item">
+                <div class="review-item-top">
+                  <span class="avatar a3" aria-hidden="true">S</span>
+                  <div><strong>Sophie Walker</strong><em>Brisbane, Queensland</em></div>
+                  <span class="review-item-stars" aria-hidden="true">★★★★★</span>
+                </div>
+                <p>"Fast, friendly service all the way to Queensland. The anklet set is my new favourite accessory."</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- United Kingdom -->
+          <div class="country-group reveal">
+            <div class="country-head">
+              <span class="country-flag" aria-hidden="true">🇬🇧</span>
+              <div>
+                <h3>United Kingdom</h3>
+                <div class="country-stars" aria-label="4.9 out of 5 stars">★★★★★ <span>4.9</span></div>
+              </div>
+            </div>
+            <ul class="country-reviews">
+              <li class="review-item">
+                <div class="review-item-top">
+                  <span class="avatar a1" aria-hidden="true">A</span>
+                  <div><strong>Amelia Hart</strong><em>London, England</em></div>
+                  <span class="review-item-stars" aria-hidden="true">★★★★★</span>
+                </div>
+                <p>"The beadwork is even more stunning in person. My bracelets arrived in London beautifully wrapped — already ordered again."</p>
+              </li>
+              <li class="review-item">
+                <div class="review-item-top">
+                  <span class="avatar a2" aria-hidden="true">O</span>
+                  <div><strong>Oliver Smith</strong><em>Manchester, England</em></div>
+                  <span class="review-item-stars" aria-hidden="true">★★★★★</span>
+                </div>
+                <p>"Gifted a basket to my sister — it's the most beautiful thing in her flat. Worth every penny."</p>
+              </li>
+              <li class="review-item">
+                <div class="review-item-top">
+                  <span class="avatar a3" aria-hidden="true">I</span>
+                  <div><strong>Isla MacDonald</strong><em>Edinburgh, Scotland</em></div>
+                  <span class="review-item-stars" aria-hidden="true">★★★★★</span>
+                </div>
+                <p>"From Edinburgh to Kenya and back — smooth ordering, gorgeous craft, and it supports real artisans. 10/10."</p>
+              </li>
+              <li class="review-item">
+                <div class="review-item-top">
+                  <span class="avatar a4" aria-hidden="true">H</span>
+                  <div><strong>Henry Clarke</strong><em>Cardiff, Wales</em></div>
+                  <span class="review-item-stars" aria-hidden="true">★★★★★</span>
+                </div>
+                <p>"My beaded belt is superb quality. The whole unboxing felt special — tissue paper, a thank-you card, the lot."</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ CTA / NEWSLETTER ══════════ -->
+    <section class="cta" id="newsletter">
+      <div class="container cta-inner reveal">
+        <div class="cta-content">
+          <p class="eyebrow eyebrow-light">Gifts with meaning</p>
+          <h2 class="cta-title">Bring home a piece of the Maasai story</h2>
+          <p class="cta-sub">
+            Join our global family — be the first to see new crafts, and enjoy a
+            <strong>10% welcome gift</strong> on your first order.
+          </p>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <label class="sr-only" for="newsletterEmail">Email address</label>
+            <input type="email" id="newsletterEmail" name="email" placeholder="Your email address" autocomplete="email" required />
+            <button type="submit" class="btn btn-light">Get 10% off</button>
+          </form>
+          <p class="cta-note">No spam, only beautiful things. Unsubscribe anytime.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ CONTACT ══════════ -->
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info reveal">
+          <p class="eyebrow">Get in Touch</p>
+          <h2 class="section-title">Questions, custom orders &amp; <span class="grad-text">wholesale enquiries</span></h2>
+          <p class="contact-lead">
+            Looking for a unique corporate gift, a wedding favour, or a bulk order for your
+            shop? We'd love to hear from you — we ship worldwide.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z" opacity="0"/><path d="M4 6l8 7 8-7M4 6h16v12H4z"/></svg>
+              </span>
+              <span><strong>Email us</strong><a href="mailto:hello@hopegiftcrafts.com">hello@hopegiftcrafts.com</a></span>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 1.9z"/></svg>
+              </span>
+              <span><strong>WhatsApp</strong><a href="tel:+254700000000">+254 700 000 000</a></span>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <span><strong>Studio</strong><span>Nairobi, Kenya — shipping worldwide</span></span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="cName">Full name</label>
+              <input type="text" id="cName" name="name" placeholder="Jane Doe" required />
+            </div>
+            <div class="field">
+              <label for="cEmail">Email</label>
+              <input type="email" id="cEmail" name="email" placeholder="jane@email.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="cCountry">Country</label>
+              <input type="text" id="cCountry" name="country" placeholder="United Kingdom" required />
+            </div>
+            <div class="field">
+              <label for="cTopic">Topic</label>
+              <select id="cTopic" name="topic">
+                <option>Order enquiry</option>
+                <option>Custom / bulk order</option>
+                <option>Wholesale partnership</option>
+                <option>Just saying hello</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="cMessage">Message</label>
+            <textarea id="cMessage" name="message" rows="4" placeholder="Tell us what you're dreaming of…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          <p class="form-note">We reply within 24 hours, wherever you are in the world.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <span class="bead b1"></span><span class="bead b2"></span><span class="bead b3"></span><span class="bead b4"></span>
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">Hope Gift Crafts</span>
+            <span class="brand-tag">Handmade in Kenya · Worldwide</span>
+          </span>
+        </a>
+        <p>Authentic Maasai crafts — beaded with love, shared with the world.</p>
+        <div class="socials" aria-label="Social media">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8.5 20l4-11"/><path d="M12 7a2.5 2.5 0 0 1 2 2c0 1-1 2-1 2"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M14 4v9.5a4 4 0 1 1-3.5-4"/><path d="M14 4a6 6 0 0 0 6 6"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#collection">The Collection</a></li>
+          <li><a href="#heritage">Our Heritage</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#contact">Contact us</a></li>
+          <li><a href="#process">Shipping &amp; delivery</a></li>
+          <li><a href="#contact">Wholesale</a></li>
+          <li><a href="#contact">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>We deliver worldwide</h4>
+        <p class="footer-ship">Tracked shipping to 40+ countries in 7–14 days. Pay in USD, EUR or GBP.</p>
+        <div class="pay-badges" aria-label="Accepted payment methods">
+          <span>VISA</span><span>Mastercard</span><span>PayPal</span><span>M-Pesa</span>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Hope Gift Crafts. Crafted with <span class="heart" aria-hidden="true">♥</span> in Kenya.</p>
+      <p class="footer-links"><a href="#home">Privacy</a> · <a href="#home">Terms</a> · <a href="#home">Cookies</a></p>
+    </div>
+  </footer>
+
+  <!-- ══════════ CART DRAWER ══════════ -->
+  <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Shopping cart">
+    <div class="cart-head">
+      <h3>Your Basket <span id="cartHeadCount">(0)</span></h3>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="cart-body" id="cartBody">
+      <div class="cart-empty" id="cartEmpty">
+        <span class="cart-empty-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/><path d="M3 4h2.2l2.4 12.2a1.5 1.5 0 0 0 1.5 1.2h8.6a1.5 1.5 0 0 0 1.5-1.2L21 8H6"/></svg>
+        </span>
+        <p>Your basket is empty.</p>
+        <a href="#collection" class="btn btn-primary" id="cartBrowse">Browse the collection</a>
+      </div>
+      <ul class="cart-items" id="cartItems"></ul>
+    </div>
+    <div class="cart-foot" id="cartFoot" hidden>
+      <div class="cart-row"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+      <div class="cart-row cart-ship"><span>Shipping</span><span id="cartShipping">Calculated at checkout</span></div>
+      <div class="cart-row cart-total"><span>Total</span><span id="cartTotal">$0.00</span></div>
+      <p class="cart-note" id="cartNote">Add $150 more for free worldwide shipping.</p>
+      <button class="btn btn-primary btn-block" id="checkoutBtn">Checkout — Ship Worldwide</button>
+    </div>
+  </aside>
+
+  <!-- ══════════ TOAST ══════════ -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
